@@ -1,0 +1,5 @@
+1. user can select date from current to next 30 years
+2. user can't be able to switch through months with 'right' and 'left' arrows. (couldn't find time to implement this feature)
+
+Known issues
+1. viewing already entered date is not implemented correctly.

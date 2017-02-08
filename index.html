@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>datepicker</title>
+		<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+    	<main>
+	    	<div class="container">
+		        <form class="jumbotron">
+		        	<div class="form-group row">
+		        		<label for="date-input" class="col-md-2 text-right control-label">Calendar</label>
+		        		<div class="col-md-2 date-wrapper">
+		        			<input id="date-input" class="form-control" placeholder="Enter date" type="text">
+		        			<div class="calendar-holder">
+		        			</div>
+		        		</div>
+		        	</div>
+		        </form>
+	        </div>
+        </main>
+        <script id="month-template" type="text/x-handlebars-template">
+        	<div class="month-wrapper">
+        		{{#each dates}}
+        			<div class="{{this.class}}" data-date="{{this.date}}" data-month="{{this.month}}" data-year="{{this.year}}">{{this.date}}</div>
+        		{{/each}}
+        	</div>
+        </script>
+        <script id="months-template" type="text/x-handlebars-template">
+        	<div class="months-wrapper">
+	        	<div class="month" data-month="01" data-year="{{year}}" >January</div>
+	        	<div class="month" data-month="02" data-year="{{year}}" >February</div>
+	        	<div class="month" data-month="03" data-year="{{year}}" >March</div>
+	        	<div class="month" data-month="04" data-year="{{year}}" >April</div>
+	        	<div class="month" data-month="05" data-year="{{year}}" >May</div>
+	        	<div class="month" data-month="06" data-year="{{year}}" >June</div>
+	        	<div class="month" data-month="07" data-year="{{year}}" >July</div>
+	        	<div class="month" data-month="08" data-year="{{year}}" >August</div>
+	        	<div class="month" data-month="09" data-year="{{year}}" >September</div>
+	        	<div class="month" data-month="10" data-year="{{year}}" >October</div>
+	        	<div class="month" data-month="11" data-year="{{year}}" >November</div>
+	        	<div class="month" data-month="12" data-year="{{year}}" >December</div>
+        	</div>
+        </script>
+        <script id="year-bar-template" type="text/x-handlebars-template">
+        	<div class="year-bar collapsed" data-year="{{year}}">
+        		<span class="month-selected"></span>
+        		<span class="year-val">{{year}}</span>
+        		<span class="arrow arrow-down"></span>
+        		<div class="days">
+        			<div class="day">S</div>
+        			<div class="day">M</div>
+        			<div class="day">T</div>
+        			<div class="day">W</div>
+        			<div class="day">T</div>
+        			<div class="day">F</div>
+        			<div class="day">S</div>
+        		</div>
+        	</div>
+        </script>
+        <script src="js/vendor/jquery-3.1.1.min.js"></script>
+        <script src="js/vendor/handlebars-v4.0.5.js"></script>
+        <script src="js/vendor/moment.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+1. this runs on express middleware, so you have to have node installed on your machine
+2. install node at a global level
+3. open cmd prompt or terminal in the unzipped 'Datepicker' folder and type 'npm install'
+4. after installing of node module(s), type 'npm run server'
+5. as it says, the app is up at '3030' port number(it's hardcoded for now temporarily)
+6. fire up the browser(which should have been an automatic task!) and point to 'localhost:3030/'
